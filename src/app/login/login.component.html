@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="row">
+        <div class="col-6">
+         
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                        <form  [formGroup]="loginForm" class="m-5 p-5 shadow">
+                            <h3 class="text-center m-3">Login Here..</h3>
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline ">
+                                <input formControlName="email" type="email" id="loginName" class="form-control" />
+                                <label class="form-label" for="loginName">Email</label>
+                            </div>
+                            <div *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched" class="fw-bolder text-danger text-center ">
+                                *Invalid email format
+                         </div>
+                            <!-- Password input -->
+                            <div data-mdb-input-init class="form-outline ">
+                                <input formControlName="password" type="password" id="loginPassword" class="form-control" />
+                                <label class="form-label" for="loginPassword">Password</label>
+                            </div>
+                            <div *ngIf="this.loginForm.get('password')?.errors && this.loginForm.get('password')?.touched" class="fw-bolder text-danger text-center ">
+                                *Invalid password format
+                         </div>
+                            <div class="text-center">
+                                    <!-- Submit button -->
+                                    <button (click)="  login()" type="submit" class="btn btn-sucess btn-block mb-4">Sign in</button>
+                            </div>
+                           
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>Not a member? <a routerLink="/user/register">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                   
+                </div>
+                <!-- Pills content -->
+           
+        </div>
+        <div class="col-6">
+            <!-- image -->
+            <img  src="https://tokoterserah.com/images/empty-cart.gif" alt="">
+        </div>
+    </div>
+</div>

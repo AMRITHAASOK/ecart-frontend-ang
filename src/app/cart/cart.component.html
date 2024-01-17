@@ -1,0 +1,60 @@
+<!-- cart empty  -->
+<div class="container text-center m-5 p-5 ">
+    <img height="400px" width="500px"  src="https://supershopping.lk/images/home/Cart-empty.gif" alt="">
+    <button routerLink="/" class="btn btn-success m-5">Add Items</button>
+</div>
+
+
+<!-- 
+cart with product -->
+
+<div class="container">
+    <div class="row my-5">
+        <div class="col-8">
+            <!-- table -->
+            <table class="table shadow">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>T shirt</td>
+                    <td>
+                        <img height="100px" src="https://images.bewakoof.com/t1080/men-beast-within-3-0-oversized-fit-t-shirt-620155-1697028287-1.jpg" alt="">
+                    </td>
+                    <td>
+                       <div class="d-flex">
+                        <button class="btn">-</button>
+                        <input type="text" class="form-control" value="20" width="10px" style="max-width: 45px;" readonly>
+                        <button class="btn">+</button>
+                       </div>
+                       
+                    </td>
+                    <td>$150</td>
+                    <td>
+                        <i class="fa-solid fa-trash text-danger"></i>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+        </div>
+        <div class="col-4 text-center">
+            <div class="card shadow">
+                <h4 class="m-3">Cart Summary</h4>
+                <h3>Total Price : $467</h3>
+                <button  class="btn btn-success mx-5 my-3">Check Out</button>
+            </div>
+
+        </div>
+    </div>
+</div>
