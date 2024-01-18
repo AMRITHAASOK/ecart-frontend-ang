@@ -34,7 +34,8 @@ export class ViewProductComponent implements OnInit{
     addToWishlist(product:any){
       
        if(sessionStorage.getItem('token')){
-        this.api.addToWishlist(product).subscribe({
+        // product=this.product
+        this.api.addToWishlist(this.product).subscribe({
           next:(item:any)=>{
             console.log(item);
   
